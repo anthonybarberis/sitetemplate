@@ -13,7 +13,7 @@ main {
     align-content: flex-start
 }
 
-header, section, aside, footer {
+header, main section, aside, footer {
     padding: 15px;
     box-sizing: border-box;
 }
@@ -21,12 +21,22 @@ header, section, aside, footer {
 header {
     background-color: #4484ce;
     color: #ffffff;
+    display: flex;
 }
 header img {
-    height: 150px;
+    height: 25vw;
+    max-height: 150px;
     border-radius: 50%;
     border: solid #d9d9d9 4px;
     box-shadow: 0 2px 3px 1px rgba(0,0,0,.3);
+}
+header section {
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+}
+header h1, header p {
+    margin: 0 0 5px 0;
 }
 
 main section {
