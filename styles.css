@@ -26,6 +26,7 @@ header {
 section {
     flex: 3;
     min-width: 350px;
+    background-color: #ffffff;
 }
 
 article {
@@ -35,16 +36,13 @@ article {
 
 aside {
     flex: 1;
-    min-width: 200px;
+    min-width: 125px;
     background-color: #f9cf00;
 }
 aside ul {
     padding-left: 15px;
 }
-aside li {
-    margin: 0 0 10px 0;
-}
 
 footer {
-    background-color: #ffffff;
+    background-color: #d9d9d9;
 }
