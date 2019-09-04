@@ -23,23 +23,23 @@ header {
     color: #ffffff;
 }
 
-section {
+main section {
     flex: 3;
     min-width: 350px;
     background-color: #ffffff;
 }
 
-article {
+main article {
     padding: 0 0 10px 0;
     box-sizing: border-box;
 }
 
-aside {
+main aside {
     flex: 1;
     min-width: 125px;
     background-color: #f9cf00;
 }
-aside ul {
+main ul {
     padding-left: 15px;
 }
 
