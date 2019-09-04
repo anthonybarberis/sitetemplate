@@ -22,6 +22,12 @@ header {
     background-color: #4484ce;
     color: #ffffff;
 }
+header img {
+    height: 150px;
+    border-radius: 50%;
+    border: solid #d9d9d9 4px;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,.3);
+}
 
 main section {
     flex: 3;
