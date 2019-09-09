@@ -59,8 +59,10 @@ main ul {
     padding: 0 10px 0 15px;
 }
 main p {
-    padding: 0 10px 0 0;
+    padding: 0 0 0 0;
     text-align: justify;
+}
+
 }
 footer {
     background-color: #d9d9d9;
