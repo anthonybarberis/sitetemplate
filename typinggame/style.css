@@ -1,11 +1,26 @@
 main {
     border: solid red 5px;
     max-width: 400px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     font-size: 1.5em;
     margin: 0 auto;
+}
+
+#instructions {
+    text-align: left;
+}
+
+#game {
+    display: none;
+}
+
+#play {
+    border: solid red 2px;
+    margin: 20px 0 0 0;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 p {
@@ -27,4 +42,5 @@ input {
     font-size: 1em;
     max-width: 300px;
     padding: 10px;
+    margin: 0 0 20px 0;
 }

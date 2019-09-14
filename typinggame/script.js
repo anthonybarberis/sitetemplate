@@ -1,4 +1,4 @@
-window.onload = init;
+//window.onload = init;
 
 var words = [
     'breathe',
@@ -56,8 +56,8 @@ var words = [
 
 var score = 0;
 var timeLeft = 0;
-var defaultTime = 5;
-var timer = setInterval(countDown, 100);
+var defaultTime = 7;
+var timer = "" //setInterval(countDown, 100);
 var wordToType = "";
 var maxTime = defaultTime;
 
@@ -80,9 +80,15 @@ function countDown() {
 function youLose() {
     alert("Game over!\n\nFinal Score: " + score + "\n\nMax Time: " + maxTime + "s")
     score = 0;
-    init();    
+    init();
 }
 
+document.getElementById('play').addEventListener('click', function () {
+    document.getElementById('instructions').setAttribute('style', "display: none;");
+    document.getElementById('game').setAttribute('style', "display: initial;");
+    timer = setInterval(countDown, 100);
+    init();
+})
 
 function init() {
     randomWord();
@@ -91,13 +97,22 @@ function init() {
     document.getElementById('timer').innerHTML = timeLeft + "s";
     document.getElementById('input').addEventListener('change', function () {
         if (input.value == wordToType) {
+            document.getElementById('wordToType').setAttribute('style', "background-color: #00ff00;")
+            setInterval(function () {
+                document.getElementById('wordToType').setAttribute('style', "background-color: #ffffff;")
+            }, 300)
             score++;
-            timeLeft ++;
-            timeLeft ++;
+            timeLeft++;
+            timeLeft++;
             if (timeLeft > maxTime) {
                 maxTime = timeLeft;
             }
             randomWord();
+        } else {
+            document.getElementById('wordToType').setAttribute('style', "background-color: #ff0000;")
+            setInterval(function () {
+                document.getElementById('wordToType').setAttribute('style', "background-color: #ffffff;")
+            }, 300)
         }
         document.getElementById('score').innerHTML = score;
         input.value = "";
